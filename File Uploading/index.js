@@ -5,8 +5,26 @@ var express = require('express');
 var fs = require('fs');
 var app = express();
 app.configure(function(){
-  app.use(express.bodyParser());
+app.use(express.bodyParser({limit: '50mb'}));
+  app.use(express.json());
+app.use(express.urlencoded());
+app.use(express.static(__dirname+'/public'));
+  
 });
+
+/*app.use(function (req, res, next) {
+    // Website you wish to allow to connect
+    res.setHeader('Access-Control-Allow-Origin', 'localhost:8000');
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    // Request headers you wish to allow
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    // Set to true if you need the website to include cookies in the requests sent
+    // to the API (e.g. in case you use sessions)
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    // Pass to next layer of middleware
+    next();
+});*/
 
 // Uploading Script
 
@@ -38,21 +56,30 @@ function upload(response, postData,upload_dir) {
     esponse.end();	
 }
 
-app.post('/upload', function(req, res) {
+app.get('/', function(req, res) {
+	res.sendFile('./public/index.html');
+});
 
-	postData = '';
+app.post('/upload',function(req, res) {
 
-	request.setEncoding('utf8');
+	var postData = '';
 
-	request.addListener('data', function (postDataChunk) {
+	req.setEncoding('utf8');
+
+	req.addListener('data', function (postDataChunk) {
 			postData += postDataChunk;
+			console.log(postDataChunk);
 		});
 
-	request.addListener('end', function () {
-			upload(res, postData,'uploads');
+	req.addListener('end', function () {
+			//upload(res, postData,'uploads');
+			res.json({"message":postData});
+			//res.end();
 		});
 		
-	res.end();
+	
+		
+		
 });
 
 app.listen(process.env.PORT || 8000);

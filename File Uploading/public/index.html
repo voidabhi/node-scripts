@@ -1,0 +1,47 @@
+
+<html>
+	<head>
+		<title>File Uploading</title>
+		<script src="jquery-1.8.2.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			
+				var all_files = [];
+				
+				$(":file").change(function(){
+				var data = document.getElementById("data");
+				var file = data.files[0];
+				all_files = data.files;
+				
+				var reader = new FileReader();
+				reader.onload = handleReaderLoad;
+				reader.readAsDataURL(file);				
+				console.log(file);
+				});
+				
+				function handleReaderLoad(evt)
+				{
+								var current_file = {};
+								current_file_id = 0;
+								
+							current_file.name = all_files[current_file_id].name;
+							current_file.type = all_files[current_file_id].type;
+							current_file.contents = evt.target.result;
+							
+							console.log(JSON.stringify(current_file));
+							$.post("/upload",JSON.stringify(current_file),function(data,textStatus, jqXHR){
+							
+								console.log(data);
+							});
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<form enctype="multipart/form-data">
+			<input name="file" type="file" id="data" />
+			<input type="button" value="Upload" />
+		</form>
+		<progress></progress>
+	</body>
+</html>
