@@ -13,7 +13,7 @@ var syncfunc = app.use(express.basicAuth(function(user,pass){
 // Async 
 var async = app.use(express.basicAuth(function(){
 	var result = (user==='testUser'&&pass==='testPass');
-	callback(null /*error*/,result);
+	callback(null,result);
 }));
 
 app.get("/home",syncauth,function(req,res){
