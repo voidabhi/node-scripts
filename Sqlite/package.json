@@ -1,0 +1,15 @@
+{
+  "name": "sqlite-app",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "express": "^3.5.1",
+    "sqlite3": "2.2.3"
+  }
+}
