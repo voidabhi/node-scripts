@@ -19,6 +19,12 @@ var stmt = db.prepare("INSERT INTO STUFF VALUES(?)");
 	for(var i=0;i<10;i++)
 		stmt.run("Thing #"+i);
 stmt.finalize();
+
+// Query
+var query = "SELECT rowid as id ,thing from Stuff";
+db.each(query,function(err,row){
+	console.log(row.id + ":"+ row.thing);
+});
 });
 
 db.close();
