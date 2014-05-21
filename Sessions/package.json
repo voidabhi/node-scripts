@@ -1,0 +1,8 @@
+{
+  "name": "AuthenticationEx",
+  "description": "An example explaining authentication in node.js",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "3.*"
+  }
+}
