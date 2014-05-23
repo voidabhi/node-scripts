@@ -1,0 +1,13 @@
+{
+  "name" : "cache",
+  "description" : "A simple in-memory cache.",
+  "author" : "Abhijeet Mohan",
+  "keywords" : [
+    "cache",
+    "ram",
+    "simple",
+    "storage"
+  ],
+  "main" : "app.js",
+  "version" : "0.0.1"
+}
