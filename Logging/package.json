@@ -1,0 +1,8 @@
+{
+  "name": "file-uploader",
+  "description": "A rest api file uploader",
+  "version": "0.0.1",
+  "dependencies": {
+    "log4js":"*"
+  }
+}
