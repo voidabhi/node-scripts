@@ -26,3 +26,7 @@ var connection = function(id){
  myEmitter.emit('message', 'this is the first message'); 
  myEmitter.emit('message', 'this is the second message');
  myEmitter.emit('message', 'welcome to nodejs');
+ 
+ // removing events
+ 
+ myEmitter.removeListener('connection',connection);
