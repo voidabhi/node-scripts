@@ -35,3 +35,31 @@ chatServer.on("connection",function(client){
 
 });
 
+// Broadcast message
+function broadcast(message,client)
+{	
+	var cleanup = [];
+	// Sending message to contact list
+	for(var i=0;i<clientList.length;i++)
+		// Skipping the client which has sent the message
+		if(clientList[i]!==client){
+			// Checking if the client has left or not
+			if(clientList[i].writable)
+			clientList[i].write(client.name+" says "+message);
+			else
+			{
+				cleanup.push(clientList[i]);
+				clientList[i].destroy();
+			}
+		}
+	// Removing dead nodes
+	for(var i=0;i<cleanup.Length;i++)
+		clientList.splice(clientList.indexOf(cleanup[i]),1);
+}
+
+// Binding server to a port
+chatServer.listen(9000);
+
+// Displaying message
+console.log("Server listening to port 9000...");
+
