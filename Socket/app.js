@@ -13,3 +13,10 @@ io.on('connection', function(socket){
     socket.emit('image', { image: true, buffer: buf });
   });
 });
+
+// sending image data
+
+self.canvas.toBuffer(function(err, buf){
+  if (err) throw err;
+  io.emit('frame', buf);
+});
