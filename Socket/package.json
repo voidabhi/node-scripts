@@ -1,0 +1,8 @@
+{
+  "name": "SocketEx",
+  "description": "An example explaining socket in node.js",
+  "version": "0.0.1",
+  "dependencies": {
+    
+  }
+}
