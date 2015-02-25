@@ -3,7 +3,7 @@ var express = require("express");
 var logfmt = require("logfmt");
 var mongoose = require("mongoose");
 var app = express();
-MONGODB_URL = '' // 'mongodb://<username>:<password>@novus.modulusmongo.net:27017/<identifier>'
+MONGODB_URL = '' // 'mongodb://<username>:<password>@novus.modulusmongo.net:27017/<collection_name>'
 
 mongoose.connect(MONGODB_URL);
 
