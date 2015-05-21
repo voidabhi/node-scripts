@@ -1,7 +1,7 @@
 NodeJs Scripts
 ==============
 
-The repository contains useful and commonly used scripts for a nodejs developers.
+The repository contains useful and commonly used snippets for a nodejs developers.
 
 
 License 
