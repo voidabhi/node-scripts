@@ -27,4 +27,5 @@ db.each(query,function(err,row){
 });
 });
 
+// closing the db
 db.close();
