@@ -23,6 +23,8 @@ The repository contains useful and commonly used snippets for a nodejs developer
 
 `Sample HTTP Server`
 
+`Authentication`
+
 
 License 
 ==============
