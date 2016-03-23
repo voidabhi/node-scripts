@@ -1,5 +1,4 @@
-NodeJs Scripts
-==============
+## NodeJs Scripts
 
 The repository contains useful and commonly used snippets for a nodejs developers.
 
@@ -26,8 +25,7 @@ The repository contains useful and commonly used snippets for a nodejs developer
 `Authentication`
 
 
-License 
-==============
+### License 
 
 ```
 The MIT License (MIT)
