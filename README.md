@@ -1,4 +1,4 @@
-## NodeJs Scripts
+## Node Scripts
 
 The repository contains useful and commonly used snippets for a nodejs developers.
 
