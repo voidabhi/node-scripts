@@ -1,6 +1,6 @@
 {
-  "name": "file-uploader",
-  "description": "A rest api file uploader",
+  "name": "logger-example",
+  "description": "A simple logging example with node",
   "version": "0.0.1",
   "dependencies": {
     "log4js":"*"
