@@ -3,7 +3,7 @@
 The repository contains useful and commonly used snippets for a nodejs developers.
 
 `Sqlite` `TCP Chat` `Caching` `Sessions` `Optimist` `Mongoose` `Event` `Error Handling` `File Uploading` 
-`Sample HTTP Server` `Authentication` `Logging` `Socket`
+`Sample HTTP Server` `Authentication` `Logging` `Socket` `Thrift` `Subreddit` `Streams` `DB Backups` `Dropbox` `ES`
 
 
 ### License 
