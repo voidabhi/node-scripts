@@ -9,7 +9,7 @@ var contentTypes = {
     '.wav': 'audio/x-wav',
     '.m4a': 'audio/x-m4a',
     '.3gp': 'audio/3gpp',
-    '.mp4': 'video/mp4'
+    '.mp4': 'audio/mp4'
 };
 
 // imports for file info api
